@@ -1,4 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>콩콩민콩콩석콩콩</title>
+    <style>
+        body {
+            background-color: #ff00ff; /* 눈 아픈 핫핑크 */
+            overflow: hidden;
+            font-family: 'Comic Sans MS', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
+        .main-text {
+            font-size: 5rem;
+            font-weight: bold;
+            color: yellow;
+            text-shadow: 5px 5px #000;
+            animation: spin 0.5s infinite linear;
+        }
 
-<h1>이선율</h1>
-<p>폰보지마라</p>
+        @keyframes spin {
+            from { transform: rotate(0deg) scale(1); }
+            to { transform: rotate(360deg) scale(1.5); }
+        }
+
+        #annoying-btn {
+            padding: 20px 40px;
+            font-size: 20px;
+            position: absolute;
+            cursor: pointer;
+            background: #00ff00;
+            border: 5px outset white;
+        }
+
+        .kong {
+            position: absolute;
+            font-size: 24px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-text">콩콩민콩콩석콩콩</div>
+    
+    <button id="annoying-btn" onmouseover="moveButton()">여기 클릭해서 나가기</button>
+
+    <script>
+        // 1. 버튼 못 누르게 도망가기
+        function moveButton() {
+            const btn = document.getElementById('annoying-btn');
+            const x = Math.random() * (window.innerWidth - btn.clientWidth);
+            const y = Math.random() * (window.innerHeight - btn.clientHeight);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        // 2. 무한 콩콩 생성
+        setInterval(() => {
+            const kong = document.createElement('div');
+            kong.className = 'kong';
+            kong.innerText = '콩콩민콩콩석콩콩';
+            kong.style.left = Math.random() * 100 + 'vw';
+            kong.style.top = Math.random() * 100 + 'vh';
+            kong.style.color = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+            kong.style.transform = `rotate(${Math.random()*360}deg)`;
+            document.body.appendChild(kong);
+        }, 100);
+
+        // 3. 들어오자마자 짜증나는 경고창 (선택사항)
+        window.onload = function() {
+            alert("콩콩민콩콩석콩콩 월드에 오신 것을 환영합니다.");
+            alert("나갈 수 있을 것 같아?");
+            alert("콩콩민...");
+            alert("콩콩석...");
+            alert("콩콩!!!");
+        };
+
+        // 4. 페이지 닫으려고 하면 방해하기
+        window.onbeforeunload = function() {
+            return "콩콩민콩콩석콩콩을 두고 떠나시겠습니까?";
+        };
+    </script>
+</body>
+</html>
