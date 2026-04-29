@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세상에서 가장 무서운 퀴즈</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            transition: background-color 0.5s;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; font-size: 2rem; }
+        .question { font-size: 1.5rem; margin-bottom: 20px; font-weight: bold; }
+        .answer { 
+            font-size: 5rem; 
+            color: #ff4757; 
+            display: none; 
+            margin-top: 20px;
+            animation: bounce 0.5s infinite alternate;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ffa502;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: scale(1.1); }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="question">🐯 호랑이가 웃으면?</div>
+    <button onclick="revealAnswer()">정답 확인하기</button>
+    <div id="answer" class="answer">🐯우희범🐯</div>
+</div>
+
+<script>
+    function revealAnswer() {
+        // 정답 보여주기
+        document.getElementById('answer').style.display = 'block';
+        // 배경색 킹받게 바꾸기
+        document.body.style.backgroundColor = '#ffeaa7';
+        // 버튼 숨기기
+        document.querySelector('button').style.display = 'none';
+        
+        // 팁: 나중에 웃음소리 mp3가 있다면 여기에 재생 코드를 넣어도 좋아요!
+        alert("우희범!!! 🐯🐯🐯 엌ㅋㅋㅋㅋ");
+    }
+</script>
+
+</body>
+</html>
