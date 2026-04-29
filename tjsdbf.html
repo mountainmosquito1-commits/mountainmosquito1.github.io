@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>⚠️ 긴급 경고 ⚠️</title>
+    <style>
+        @keyframes flash {
+            0% { background-color: #ff0000; }
+            50% { background-color: #00ff00; }
+            100% { background-color: #0000ff; }
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', '나눔고딕', cursive;
+            animation: flash 0.1s infinite; /* 광란의 배경색 변화 */
+        }
+
+        .main-text {
+            font-size: 5rem;
+            font-weight: bold;
+            color: yellow;
+            text-shadow: 5px 5px #ff00ff, -5px -5px #00ffff;
+            animation: shake 0.1s infinite;
+            z-index: 10;
+        }
+
+        .sub-text {
+            font-size: 2rem;
+            background: white;
+            padding: 10px;
+            margin-top: 20px;
+            transform: skew(20deg);
+        }
+
+        #runaway-btn {
+            position: absolute;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            background: black;
+            color: white;
+            border: 5px solid white;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+
+        .floating {
+            position: absolute;
+            font-size: 1.2rem;
+            color: white;
+            animation: spin 2s infinite linear;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-text">선율아!!!! 폰보지마!!!!</div>
+    <div class="sub-text">정신 나갈 거 같애 정신 나갈 거 같애 정신 나갈 거 같애</div>
+    
+    <button id="runaway-btn" onmouseover="moveButton()">알았어 안볼게 (탈출)</button>
+
+    <script>
+        // 1. 마우스 갖다대면 도망가는 버튼
+        function moveButton() {
+            const btn = document.getElementById('runaway-btn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        // 2. 화면 곳곳에 킹받는 텍스트 뿌리기
+        function createFloatingText() {
+            const texts = ['대답', '폰 내려놔', '낑낑이', '해군몇기야?', '정신나갈거같애'];
+            const div = document.createElement('div');
+            div.className = 'floating';
+            div.innerText = texts[Math.floor(Math.random() * texts.length)];
+            div.style.left = Math.random() * 100 + 'vw';
+            div.style.top = Math.random() * 100 + 'vh';
+            div.style.fontSize = (Math.random() * 3 + 1) + 'rem';
+            document.body.appendChild(div);
+        }
+
+        // 0.5초마다 텍스트 생성
+        setInterval(createFloatingText, 500);
+
+        // 3. 페이지 나갈 때 경고창 띄우기 (일부 브라우저에서 작동)
+        window.onbeforeunload = function() {
+            return "어디가?";
+        };
+    </script>
+</body>
+</html>
