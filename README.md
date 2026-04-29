@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레전드 킹받음 주의</title>
+    <style>
+        body {
+            background-color: #00ff00; /* 킹받는 형광 연두색 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* 텍스트 스타일 */
+        h1 {
+            font-size: 3rem;
+            color: #ff00ff;
+            text-shadow: 3px 3px 0px #000;
+            margin-bottom: 20px;
+        }
+
+        /* 변기 이미지 (이모지로 대체) */
+        .toilet {
+            font-size: 150px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 비기/현승 캐릭터 */
+        .biggie {
+            font-size: 80px;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            transition: all 1s ease-in-out;
+        }
+
+        /* 물 내리기 버튼 */
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #ffeb3b, #f44336);
+            border: 5px solid #000;
+            cursor: pointer;
+            box-shadow: 5px 5px 0px #000;
+        }
+
+        button:active {
+            box-shadow: none;
+            transform: translate(5px, 5px);
+        }
+
+        /* 물 내리기 애니메이션 클래스 */
+        .flush-animation {
+            animation: spiral 1.5s forwards;
+        }
+
+        @keyframes spiral {
+            0% {
+                transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+            }
+            50% {
+                transform: translateX(-50%) translateY(100px) rotate(360deg) scale(0.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-50%) translateY(180px) rotate(720deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* 배경 요동치기 */
+        .shake {
+            animation: shake-bg 0.1s infinite;
+        }
+
+        @keyframes shake-bg {
+            0% { background-color: #00ff00; }
+            50% { background-color: #ff00ff; }
+            100% { background-color: #ffff00; }
+        }
+    </style>
+</head>
+<body id="body">
+
+    <div class="container">
+        <h1 id="msg">현승을 변기에 넣고 내려 ㅋ</h1>
+        
+        <div id="target" class="biggie">🕶️</div> <div class="toilet">🚽</div>
+        
+        <br>
+        <button onclick="flushIt()">강력 물 내리기 🌊</button>
+    </div>
+
+    <script>
+        function flushIt() {
+            const target = document.getElementById('target');
+            const msg = document.getElementById('msg');
+            const body = document.getElementById('body');
+
+            // 애니메이션 시작
+            target.classList.add('flush-animation');
+            body.classList.add('shake');
+            msg.innerText = "현승을 ㅋ 변기에 ㅋ 넣고 ㅋ 내려 ㅋ";
+
+            // 2초 후 초기화 (무한 반복 가능하게)
+            setTimeout(() => {
+                target.classList.remove('flush-animation');
+                body.classList.remove('shake');
+                msg.innerText = "현승을 변기에 넣고 내려 ㅋ";
+                alert("현승을 변기에 넣었습니다");
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
