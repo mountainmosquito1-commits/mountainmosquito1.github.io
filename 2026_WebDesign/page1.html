@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>이 디자이너를 아시나요? - 아즈카반 탈출!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&display=swap');
+
+        :root {
+            --parchment: #dcd9c6;
+            --prophet-black: #000000;
+        }
+
+        body {
+            background-color: #f0ede0;
+            font-family: 'Noto Serif KR', serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--prophet-black);
+        }
+
+        .poster-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--parchment);
+            text-align: center;
+            position: relative;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .top-header {
+            font-family: '우아한셰리프';
+            border: 1px solid var(--prophet-black);
+            padding: 8px;
+            margin-bottom: 30px;
+            font-size: 8px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .frame-outer {
+            border: 1px solid var(--prophet-black);
+            padding: 4px;
+        }
+
+        .frame-middle {
+            border: 4px solid var(--prophet-black);
+            padding: 4px;
+        }
+
+        .frame-inner {
+            border: 1px solid var(--prophet-black);
+            padding: 0px 0px 20px 0px;
+            background-color: var(--parchment);
+        }
+
+        .main-title {
+            font-size: 26px;
+            font-family: '우아한셰리프';
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .sub-title {
+            font-family: '우아한셰리프';
+            font-size: 10px;
+            margin: -12px 0 14px 0;
+        }
+
+        .wanted-image-container {
+            width: 86%;
+            margin: 0 auto 0px;
+            border: 1px solid rgba(0,0,0,0.1);
+            line-height: 0;
+        }
+
+        .wanted-image {
+            width: 100%;
+            height: auto;
+            filter: grayscale(100%) contrast(120%) brightness(90%);
+        }
+
+        .warning-box {
+            background-color: var(--prophet-black);
+            color: var(--parchment);
+            padding: 20px 20px;
+            margin: 14px auto 14px auto;
+            width: 80%;
+        }
+
+        .warning-text-small {
+            font-family: '우아한셰리프';
+            font-size: 10px;
+        }
+
+        .warning-text-large {
+            font-family: '우아한셰리프';
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: -6px;
+        }
+
+        .footer-text {
+            font-family: '우아한셰리프';
+            font-size: 8px;
+            margin-top: 20px;
+        }
+
+
+        @font-face {
+              font-family: '우아한셰리프';
+              src: url('fonts/GraceSerif-Regular.otf') format('opentype');
+              font-weight: normal;
+              font-style: normal;
+            }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <div class="top-header">예언자 일보</div>
+        <div class="frame-outer">
+            <div class="frame-middle">
+                <div class="frame-inner">
+                    <h1 class="main-title">이 디자이너를 아시나요?</h1>
+                    <p class="sub-title">현재 아즈카반 탈출!</p>
+                    <div class="wanted-image-container">
+                        <img src="img&videos/azukavan.png" alt="Wanted Person" class="wanted-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warning-box">
+            <p class="warning-text-small">극도로 주의하여 접근할 것</p>
+            <p class="warning-text-large">이 자에게 마법으로 대항하려고 시도하지 마시오!</p>
+        </div>
+        <div class="footer-text">
+            이 자를 체포하는 데 결정적인 정보를 제공할 경우 합당한 보상을 할 것임.<br>
+            마법부 산하 '마녀 감시 부서'로 즉시 부엉이를 통해 알리시오.
+        </div>
+    </div>
+</body>
+
+</html>
