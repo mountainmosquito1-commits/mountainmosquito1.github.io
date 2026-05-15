@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편지입니다!</title>
+    <style>
+        body {
+            background-color: #fff9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            color: #333;
+        }
+
+        .letter-container {
+            background-color: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 2px solid #ffeded;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .flower {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            line-height: 1.8;
+            text-align: left;
+            background-image: linear-gradient(transparent 95%, #eee 95%);
+            background-size: 100% 1.8em;
+            margin-bottom: 30px;
+            padding: 10px 5px;
+        }
+
+        .closing {
+            text-align: right;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #ff8fab;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #fb6f92;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container">
+        <div class="flower">🌺</div>
+        <h1>짜잔! 스승의날 편지입니다!</h1>
+        
+        <div class="content">
+            민경쌤! 하하하 오랜만이에요!<br>
+            스승의 날이 왔습니다! 와!!!<br><br>
+            
+            직접 이오비상을 가고 싶지만 이제 기말 과제로 조금씩 바빠지고 있습니다.. 흑흑... 방학되면 한번 놀러갈게요!<br><br>
+            요즘 날씨가 점점 더워지는데 아침 저녁으로는 많이 선선하니 감기 조심하시고 몸조심하세요!!!</div>
+
+        <div class="closing">
+            2026년 5월 15일<br>
+            김상목 올림
+        </div>
+
+        <a href="#" class="btn" onclick="alert('선생님 감사합니다! 🥰')">클릭해보세요</a>
+    </div>
+
+</body>
+</html>
