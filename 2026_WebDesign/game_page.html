@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOOM Player</title>
+    <!-- js-dos 라이브러리 로드 -->
+    <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+    <style>
+        #doom-container {
+            width: 640px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align:center;">브라우저에서 실행하는 DOOM</h2>
+    <div id="doom-container"></div>
+
+    <script>
+        // 둠 컨테이너 요소 가져오기
+        const container = document.getElementById("doom-container");
+
+        // Emulators 인스턴스 생성
+        Dos(container).run("https://js-dos.com/cdn/doom.wad.zip");
+        // 위 URL은 js-dos에서 제공하는 데모용 셰어웨어 버전 둠입니다.    
+    </script>
+</body>
+
+</html>

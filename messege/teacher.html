@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편지입니다!</title>
+    <style>
+        body {
+            background-color: #fff9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            color: #333;
+        }
+
+        .letter-container {
+            background-color: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 2px solid #ffeded;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .flower {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            line-height: 1.8;
+            text-align: left;
+            background-image: linear-gradient(transparent 95%, #eee 95%);
+            background-size: 100% 1.8em;
+            margin-bottom: 30px;
+            padding: 10px 5px;
+        }
+
+        .closing {
+            text-align: right;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #ff8fab;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #fb6f92;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container">
+        <div class="flower">🌺</div>
+        <h1>짜잔! 놀라셨죠?</h1>
+        
+        <div class="content">
+            원장쌤! 저 상목 입니다!<br>
+            직접 찾아뵙고 인사를 드려야 하는데, <br>
+            학기중이라 이렇게 연락드립니다 :(<br><br>
+            
+            전역하고 학교에서 있을 일들이 조금 두렵고, 수업은 잘 따라 갈 수 있을까 걱정했는데 다행히 좋은 친구들덕에
+            학교생활 잘 보내고 있습니다!<br>
+            이번 수업 중에 웹디자인이 있는데 여기서 배운 기능이 너무 신기하고 재밌어서 편지를 이걸로 써봤습니다! 하하핳 약간 링크만 봤을때 쌤이 
+            이상한 링크인가 의심하고 안누를까봐 걱정되긴 하네요. <br><br>
+            앞으로 남은 학기생활 열심히 하겠습니다 원장 선생님도 건강하셔야합니다!
+        </div>
+
+        <div class="closing">
+            2026년 5월 15일<br>
+            김상목 올림
+        </div>
+
+        <a href="#" class="btn" onclick="alert('선생님 사랑합니다! 🥰')">클릭해보세요</a>
+    </div>
+
+</body>
+</html>
