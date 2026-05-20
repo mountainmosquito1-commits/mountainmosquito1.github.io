@@ -5,574 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCU 중간고사 - 김상목 포트폴리오</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/dcu_style.css">
+    <link rel="stylesheet" type="text/css" href="real_page.css">
 
-    <style>
-                @font-face {
-              font-family: '우아한셰리프';
-              src: url('fonts/GraceSerif-Regular.otf') format('opentype');
-              font-weight: normal;
-              font-style: normal;
-        }
-        @font-face {
-              font-family: '해리포터';
-              src: url('fonts/해리포터글씨체-na_lover.ttf') format('truetype');
-              font-weight: normal;
-              font-style: normal;
-        }
-        @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
-    font-weight: 900;
-    font-display: swap;
-}
-
-/*폰트첨부*/
-
-        :root {
-            --primary-blue: #0047FF;
-            --dark-bg: #121212;
-            --light-bg: #F5F5F7;
-            --text-white: #FFFFFF;
-            --text-black: #000000;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'pretendard', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-black);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header & Hero Section */
-        header {
-            background-color: var(--dark-bg);
-            color: var(--text-white);
-            padding: 40px 10%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            margin-bottom: 100px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .search-bar {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            padding: 5px 20px;
-            display: flex;
-            align-items: center;
-            width: 300px;
-        }
-
-        .search-bar input {
-            background: none;
-            border: none;
-            color: white;
-            margin-left: 10px;
-            outline: none;
-            width: 100%;
-        }
-
-        .hero-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 600px;
-        }
-
-        .hero-tag {
-            font-size: 1rem;
-            margin-bottom: 10px;
-            color: #aaa;
-        }
-
-        .hero-title {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero-desc {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #ccc;
-        }
-
-        .btn-more {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 12px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            width: fit-content;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: 0.3s;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .btn-more:hover {
-            background: white;
-            color: black;
-        }
-
-        .page-indicator {
-            position: absolute;
-            bottom: 40px;
-            right: 10%;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        .page-indicator span {
-            font-weight: 300;
-            font-size: 1.2rem;
-            margin-left: 5px;
-        }
-
-        /* Profile Section */
-        .profile-section {
-            padding: 150px 10%;
-            background-color: white;
-            text-align: center;
-        }
-
-        .profile-intro {
-            font-size: 24px;
-            margin-bottom: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .name-highlight {
-            color: var(--primary-blue);
-            font-weight: 700;
-            font-size: 150px;
-            margin: 0 20px;
-        }
-
-        .dept-tag {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 25px;
-        }
-
-        .dept-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .dept-desc {
-            color: #555;
-            font-size: 1rem;
-            margin-bottom: 80px;
-            line-height: 1.8;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .card {
-            padding: 50px;
-            border-radius: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 250px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card.blue {
-            background-color: var(--primary-blue);
-            color: white;
-        }
-
-        .card.white {
-            background-color: white;
-            border: 1px solid #f0f0f0;
-        }
-
-        .card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
-        }
-
-        .card-label {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 18px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .card.white .card-label {
-            background: var(--primary-blue);
-            color: white;
-        }
-
-        .card-value {
-            font-size: 2.8rem;
-            font-weight: 700;
-        }
-
-        /* Interest Section */
-        .interest-section {
-            padding: 180px 10% 120px;
-            background-color: white;
-            text-align: center;
-            border-radius: 0 0 100px 100px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .interest-title {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            color: #444;
-            font-weight: 700;
-        }
-
-        .interest-value {
-            font-size: 5rem;
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
-
-        /* Reasoning Section */
-        .reason-section {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 200px 10%;
-            margin-top: -80px;
-            text-align: center;
-        }
-
-        .slider-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 80px;
-        }
-
-        .slider-img {
-            width: 500px;
-            height: 400px;
-            background: #2a2a2a;
-            border-radius: 15px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-        }
-
-        .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: black;
-            cursor: pointer;
-            font-size: 1.5rem;
-            transition: 0.3s;
-        }
-
-        .play-btn:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-            background: white;
-        }
-
-        .reason-q {
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-
-        .reason-a {
-            color: #999;
-            max-width: 850px;
-            margin: 0 auto;
-            font-size: 1.25rem;
-            line-height: 1.8;
-        }
-
-        /* Practice Works */
-        .works-section {
-            background-color: var(--dark-bg);
-            padding: 120px 10%;
-            text-align: center;
-            color: white;
-        }
-
-        .works-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .works-desc {
-            color: #777;
-            margin-bottom: 70px;
-            font-size: 1.1rem;
-        }
-
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-        }
-
-        .work-card {
-            background: #1e1e1e;
-            height: 450px;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 30px;
-            text-align: left;
-            transition: 0.4s;
-            cursor: pointer;
-            border: 1px solid #2a2a2a;
-        }
-
-        .work-card:hover {
-            background: #252525;
-            transform: scale(1.02);
-            border-color: var(--primary-blue);
-        }
-
-        .work-info p:first-child {
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .work-tag {
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        /* Conclusion Section */
-        .conclusion-section {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 150px 10% 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .conc-content {
-            max-width: 700px;
-            margin-bottom: 150px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .conc-title {
-            font-size: 3rem;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .conc-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .stairs-illustration {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 400px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding-right: 5%;
-        }
-
-        .step {
-            width: 60px;
-            background: white;
-            transition: 0.3s;
-        }
-
-        /* Footer */
-        footer {
-            background-color: black;
-            color: white;
-            padding: 120px 10% 60px;
-            text-align: center;
-            position: relative;
-        }
-
-        .footer-logo {
-            font-size: 1.4rem;
-            margin-bottom: 80px;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        .mischief-managed {
-            font-family: 'Times New Roman', serif;
-            font-style: italic;
-            font-size: 4rem;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-
-        .footer-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 80px;
-            color: #888;
-        }
-
-        .footer-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            font-size: 0.8rem;
-            color: #555;
-            border-top: 1px solid #222;
-            padding-top: 40px;
-            text-align: left;
-        }
-
-        .solemnly-swear {
-            width: 300px;
-            margin: 0 auto 50px;
-            opacity: 0.5;
-        }
-.text_font1 {
-text-align: center;
-font-family:'우아한셰리프';
-}
-
-
-        
+    <style>        
     </style>
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">Contents</div>
+        <nav class="nav_style">
             <ul class="nav-links">
-                <li>자기소개</li>
-                <li>좋아하는 디자인</li>
-                <li>연습작들</li>
-                <li>마무리</li>
+                <li class="li" style="font-size: 18px; margin-top: 0px; padding-top: 0px;">Contents</li>
+                <li class="li">자기소개</li>
+                <li class="li">좋아하는 디자인</li>
+                <li class="li">연습작들</li>
+                <li class="li">마무리</li>
             </ul>
             <div class="search-bar">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" placeholder="무엇을 도와드릴까요?">
+                <input type="text" placeholder="키워드를 입력하세요">
             </div>
             <div class="insta">
-                <img src="../figma_htmlgenerator_FullAuto/images/image_8.png" alt="Icon" width="30" style="filter: invert(1);">
+               <a href="https://www.instagram.com/sangmog883/">
+                <img src="img&amp;videos/instargram.png" alt="Icon" width="30" style="filter: invert(1); padding: 4px;">
+            </a>
             </div>
         </nav>
 
@@ -581,24 +37,25 @@ font-family:'우아한셰리프';
             <p class="hero-desc">숨은 페이지를 찾은 여러분에게 저를 소개하겠습니다 :)</p>
             <a href="#" class="btn-more">자세히보기</a>
         </div>
-
-        <div class="page-indicator">9<span>와 3/4 페이지</span></div>
+        <div style="height: 300px; width: 100%;"></div>
+        <div class="page-indicator"><span style="font-size: 34px; font-weight: 700;">9</span><span style="font-size: 12px; font-weight: 100;">와 3/4 페이지</span></div>
     </header>
 
     <section class="profile-section">
+       <div style="margin: 100px 0px 140px 0px;">
         <p class="profile-intro">제 이름은 <span class="name-highlight">김상목</span> 입니다.</p>
-        
+        </div>
         <div class="dept-tag">대구가톨릭대학교</div>
-        <h2 class="dept-title">뉴미디어 & 게임 디자인과</h2>
+        <h2 class="dept-title">뉴미디어 &amp; 게임 디자인과</h2>
         <p class="dept-desc">
-            군대를 다녀오기 전까지는 “디지털 디자인과" 였지만...
-다녀온 사이에 이름이 바뀌어 버렸네요...<br>
-            #23학번 #뒷방늙으니 #아직젊다...
-        </p>
+            군대를 다녀오기 전까지는 “디지털 디자인과" 였지만...<br>
+다녀온 사이에 이름이 바뀌어 버렸네요...</p>
+            <p class="dept-desc" style="font-weight: 600; margin-bottom: 100px;">#23학번 #뒷방늙으니 #아직젊다...</p>
+
 
         <div class="card-grid">
             <div class="card blue">
-                <span class="card-label">태어난 곳?</span>
+                <span class="card-label" style="background-color: white; color:var(--primary-blue); font-weight: 400;">태어난 곳?</span>
                 <span class="card-value">경남 양산</span>
             </div>
             <div class="card white">
@@ -610,16 +67,17 @@ font-family:'우아한셰리프';
                 <span class="card-value">ENTP</span>
             </div>
             <div class="card blue">
-                <span class="card-label">취미?</span>
+                <span class="card-label" style="background-color: white; color:var(--primary-blue); font-weight: 400;
+ ">취미?</span>
                 <span class="card-value">주짓수</span>
             </div>
         </div>
     </section>
 
-    <section class="interest-section">
+    <div class="interest-section">
         <p class="interest-title">현재 내가 가장 관심있는 디자인 분야는?</p>
         <h2 class="interest-value">“모션그래픽 디자인”</h2>
-    </section>
+    </div>
 
     <section class="reason-section">
         <div class="slider-container">
@@ -636,7 +94,6 @@ font-family:'우아한셰리프';
 
     <section class="works-section">
         <h2 class="works-title">그동안 만든 연습작들</h2>
-        <p class="works-desc">결과물의 형태가 영상 혹은 그래픽 작업이 많이 비중을 차지하더라도,<br>결과물을 제작하는 과정 하나하나가 저에게 큰 자산이 됩니다.</p>
         
         <div class="works-grid">
             <div class="work-card">
@@ -675,7 +132,7 @@ font-family:'우아한셰리프';
     <section class="conclusion-section">
         <div class="conc-content">
             <h2 class="conc-title">마지막으로...</h2>
-            <p>아직은 제가 생각하고 있는 것들을 모두 구현할 정도의 실력은 안되지만, 상상을 현실로 모두 옮기는 그날까지 나아가겠습니다.<br>
+            <p class="conc-main">아직은 제가 생각하고 있는 것들을 모두 구현할 정도의 실력은 안되지만, 상상을 현실로 모두 옮기는 그날까지 나아가겠습니다.<br>
             앞으로의 여정을 기대해주세요 :)<br>
             지금까지 긴 글 봐주셔서 감사합니다.</p>
         </div>
@@ -690,25 +147,17 @@ font-family:'우아한셰리프';
             <div class="step" style="height: 320px;"></div>
         </div>
     </section>
-
-    <footer>
-
-        <p class="footer-logo">NewMedia&amp;Game Design</p>
-        <h2 class="mischief-managed">Mischief managed.</h2>
+<footer class="footer">
+    <p class="footer-logo">NewMedia&amp;Game Design</p>
+    <div class="mischief-managed">Mischief managed.
         <p class="footer-subtitle">장난 끝</p>
-        <div class="footer-info">
-           <div>NewMedia%GameDesign</div>
-            <div class="contact">
-                Made by Kim SangMok<br>
-                Email: mountainmosquito1@gmail.com<br>
-                
-            </div>
-            <div class="copyright">
-                Copyright ⓒ 2026 by Kim Sangmok<br>
-                All page content is property of Kim Sangmok
-            </div>
-        </div>
-    </footer>
-
+    </div>
+    <div class="contact" style="text-align: right;">
+        Made by Kim SangMok<br>
+        Email: mountainmosquito1@gmail.com<br>
+        Copyright ⓒ 2026 by Kim Sangmok<br>
+        All page content is property of Kim Sangmok
+    </div>
+</footer>
 </body>
 </html>

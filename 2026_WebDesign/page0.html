@@ -4,30 +4,28 @@
     <meta charset="utf-8">  <!-- 한글이 정상적으로 보이도록 설정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- 모바일에서 콘텐츠 크기 최적화 -->
     <title>HTML 기본 템플릿</title>
-    <link rel="stylesheet" type="text/css" href="../css/dcu_style.css">
-    <style>
-        @font-face {
-              font-family: '우아한셰리프';
-              src: url('fonts/GraceSerif-Regular.otf') format('opentype');
-              font-weight: normal;
-              font-style: normal;
-        }
-        @font-face {
-              font-family: '해리포터';
-              src: url('fonts/해리포터글씨체-na_lover.ttf') format('truetype');
-              font-weight: normal;
-              font-style: normal;
-        }
-    
+    <link rel="stylesheet" type="text/css" href="page0.css">
+    <style>    
     </style>
 </head>
 
 <body>
        <a href="page1.html"><img src="magic_icon.png" style="width: 60px; margin: 400px auto 400px auto; display: block;"></a>
-        <a href="real_page.html">
-        <p style="text-align: center; font-family:'해리포터';  font-size: 20px;">I solemnly swear that I am up to no good.</p>
-        <p style="text-align: center; font-family:'우아한셰리프'; font-size: 10px; padding-bottom: 40px;">나는 못된 장난을 꾸미고 있음을 엄숙히 선언합니다.</p>
-          </a>
+        <div class="hover-box" style="" id="hidden">
+  </div>
+            <a href="real_page.html" class="hidden_text" id="hidden2">
+                <p class="hidden2">I solemnly swear that I am up to no good.</p>
+                <p class="hidden3" style="">나는 못된 장난을 꾸미고 있음을 엄숙히 선언합니다.</p>
+            </a>
+
+<script>
+  document.getElementById('hidden').addEventListener('click', function(){
+      document.getElementById('hidden2').style.display='block';
+  })
+
+</script>
 </body>
+
+
 
 </html>
