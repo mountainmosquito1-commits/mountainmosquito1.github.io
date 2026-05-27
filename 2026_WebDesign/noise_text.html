@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>텍스트 노이즈 생성기 연결</title>
+  <style>
+    /* 보기 좋게 꾸미는 간단한 스타일 (선택사항) */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f7;
+    }
+    .search-box {
+      display: flex;
+      gap: 10px;
+    }
+    input {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0071e3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0077ed;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>머글들이 못보게 하는 마법</h2>
+  <p>원하는 글을 입력하고 엔터를 치거나 버튼을 누르세요.</p>
+
+  <div class="search-box">
+    <input type="text" id="wordInput" placeholder="단어를 입력하세요..." onkeydown="handleKeyPress(event)">
+    <button onclick="goToLink()">이동</button>
+  </div>
+
+  <script>
+    // 링크로 이동하는 함수
+    function goToLink() {
+      // 1. 입력창에 적힌 값 가져오기
+      const word = document.getElementById('wordInput').value;
+      
+      // 빈칸일 경우 경고창 띄우기
+      if (!word.trim()) {
+        alert('단어를 입력해주세요!');
+        return;
+      }
+      
+      // 2. 기본 주소 뒤에 입력한 단어 붙이기
+      const baseUrl = "https://unscreenshottable.vercel.app/?text=";
+      const finalUrl = baseUrl + encodeURIComponent(word); // 한글/특수문자 깨짐 방지
+      
+      // 3. 해당 주소로 이동 (현재 창에서 이동)
+      window.location.href = finalUrl;
+      
+      // 만약 '새 창(새 탭)'으로 열고 싶다면 위 줄을 지우고 아래 줄 주석(#)을 해제하세요.
+      // window.open(finalUrl, '_blank');
+    }
+
+    // 엔터키를 눌렀을 때 작동하는 함수
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        goToLink();
+      }
+    }
+  </script>
+
+</body>
+</html>

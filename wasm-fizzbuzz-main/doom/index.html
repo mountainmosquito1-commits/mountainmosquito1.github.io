@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>DooM</title>
+
+    <style>
+      /* 1. 웹사이트 전체 화면 정중앙 배치 */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f2; 
+        display: flex;
+        justify-content: center;   /* 가로 정중앙 */
+        align-items: center;       /* 세로 정중앙 */
+        min-height: 100vh;         /* 브라우저 높이 전체를 기준으로 계산 */
+      }
+
+      /* 2. 메인 컨테이너 박스 (화면의 기준점) */
+      .container {
+        position: relative;
+        width: 70vw;               /* 화면 가로폭의 70% (취향껏 75vw 등으로 조절 가능) */
+        max-width: 1200px;         
+        aspect-ratio: 16 / 10;     /* 둠 황금 비율 유지 */
+        
+        border: 2px solid #ccc;    
+        background-color: #f0f0f2; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        
+        container-type: inline-size; 
+        overflow: hidden;          /* 자식 요소가 삐져나가지 않게 차단 */
+      }
+
+      /* 3. 위에 덮여서 입력을 독점하는 투명 캔버스 */
+      #screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;               /* 액자 크기에 100% 맞춤 */
+        height: 100%;
+        z-index: 2;
+        opacity: 0;                /* 눈에 안 보이게 숨김 */
+        cursor: pointer;
+      }
+
+      /* 4. 밑에 깔려서 회색 상자에 칼같이 들어맞는 아스키 화면 */
+      #output {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;               /* 액자 크기에 100% 맞춤 */
+        height: 100%;
+        z-index: 1;
+        margin: 0;                 
+        padding: 0;                
+        
+        color: #000000;               
+        font-family: 'Courier New', Courier, monospace; 
+        font-weight: bold;
+        white-space: pre;             
+        overflow: hidden;          
+
+        /* 지난번에 성공하신 완벽한 미세조정 비율 수치 */
+        font-size: 0.294cqw;        
+        line-height: 0.18375cqw;      
+        letter-spacing: -0.02cqw;
+      }
+
+      /* 로그 메시지 스타일 정의 (기본값 유지) */
+      #output span.log { color:darkslateblue; }
+      #output span.stdout { color: black; }
+      #output span.stderr { font-weight: bold; color:brown; }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
+      <div id="output"></div>
+    </div>
+
+    <div style="display: none;">
+      <p id="focushint"></p>
+      <button id="enterButton"></button>
+      <button id="leftButton"></button>
+      <button id="upButton"></button>
+      <button id="downButton"></button>
+      <button id="rightButton"></button>
+      <button id="ctrlButton"></button>
+      <button id="spaceButton"></button>
+      <button id="altButton"></button>
+      <span id="getmsps_stats">0</span><span id="getms_stats">0</span>
+      <span id="fps_stats">0</span><span id="drawframes_stats">0</span>
+      <span id="animationfps_stats">0</span>
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+
+</html>

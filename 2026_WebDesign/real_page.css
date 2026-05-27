@@ -103,8 +103,8 @@ body {
 header {
     background-color: #111113;
     color: var(--text-white);
-    padding: 40px 80px 30px 80px;
-    height: 100vh;
+    padding: 40px 80px 0px 80px;
+    height: 86vh;
     display: flex;
     flex-direction: column;
 }
@@ -335,11 +335,10 @@ nav {
     font-weight: 800;
 }
 
-/* Reasoning Section */
 .reason-section {
-    background-color: var(--dark-bg);
+    background-color: #282828;
     color: white;
-    padding: 200px 10%;
+    padding: 200px 10% 120px 10%;
     margin-top: -80px;
     text-align: center;
 }
@@ -389,6 +388,7 @@ nav {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
+    margin-top: 140px;
 }
 
 .reason-a {
@@ -400,8 +400,9 @@ nav {
 
 /* Practice Works */
 .works-section {
-    background-color: var(--dark-bg);
-    padding: 120px 10%;
+    background-color: #0e0e0e;
+    padding: 120px 0px 0px 0px;
+    height: 1200px;
     text-align: center;
     color: white;
 }
@@ -419,6 +420,7 @@ nav {
 }
 
 .works-grid {
+    padding: 0px 10% 0px 10%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -456,11 +458,15 @@ nav {
 
 /* Conclusion Section */
 .conclusion-section {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 150px 10% 0;
     position: relative;
+    background-color: var(--primary-blue);
+    width: 100%;
+    height: 600px;
+    color: white;
+    padding: 150px 20% 0;
     overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    display: inline-block;
 }
 
 .conc-content {
@@ -470,9 +476,13 @@ nav {
 }
 
 .conc-title {
+    position: absolute;
+    top: 30%;
+    left: 24%;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 .conc-content p {
@@ -509,8 +519,9 @@ footer {
 }
 
 .footer-logo {
-    font-size: 20px;
-    font-weight: 300;
+    font-family: pretendard;
+    font-size: 26px;
+    font-weight: 500;
     position: absolute;
 }
 
@@ -554,7 +565,13 @@ footer {
 }
 
 .footer {
-    padding: 40px;
+    position: relative;
+    top: -10px;
+    background-color: #0e0e0e;
+    color: white;
+    padding: 90px 10% 80px;
+    text-align: center;
+    position: relative;
 }
 
 
@@ -563,7 +580,11 @@ footer {
 }
 
 .conc-main {
+    position: absolute;
+    top: 37%;
+    left: 24%;
     font-size: 18px;
+    text-align: left;
 }
 
 #hidden2 {
@@ -584,4 +605,17 @@ footer {
 
 .nav_style {
     gap: 120px;
+}
+.contact {
+    font-family: pretendard;
+    font-weight: 100;
+}
+
+.sky_background {
+    position: relative;
+    
+}
+
+.hover-box {
+    
 }

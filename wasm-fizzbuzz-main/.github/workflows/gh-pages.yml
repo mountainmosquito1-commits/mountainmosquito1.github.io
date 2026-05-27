@@ -1,0 +1,30 @@
+name: GH-Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: Ubuntu-20.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install wasm binary toolchain
+        run: sudo apt update && sudo apt install wabt binaryen
+
+      - name: Setup Rust
+        run: rustup target add wasm32-unknown-unknown
+
+      - name: Compile
+        run: make gh-pages
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
