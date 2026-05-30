@@ -7,39 +7,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="real_page.css">
 
-    <style>        
+    <style>
     </style>
 </head>
 <body>
+    <header class="header">
+      <div style="display: flex; position: relative; justify-content: center; align-items: center; width: 100%; height: 100%; overflow: hidden;">
+        <video autoplay playsinline loop muted class="angle_mp4">
+            <source src="img_videos/videos/%E1%84%8E%E1%85%A5%E1%86%AB%E1%84%89%E1%85%A1.mp4" type="video/mp4">
+        </video>
+       <video autoplay playsinline loop muted class="angle2_mp4">
+           <source src="img_videos/videos/%E1%84%8E%E1%85%A5%E1%86%AB%E1%84%89%E1%85%A1.mp4" type="video/mp4">
+       </video>
+       </div>
+       <div style="position: absolute; width: 100%; height: 100%; top: 0; padding: 40px 80px 6px 80px;">
+           <nav class="nav_style">
+               <ul class="nav-links">
+                   <li class="li" style="font-size: 18px; margin-top: 0px; padding-top: 0px;">Contents</li>
+                   <li class="li">자기소개</li>
+                   <li class="li">좋아하는 디자인</li>
+                   <li class="li">연습작들</li>
+                   <li class="li">마무리</li>
+               </ul>
+               <div class="search-bar">
+                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                       <circle cx="11" cy="11" r="8"></circle>
+                       <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                   </svg>
+                   <input type="text" placeholder="키워드를 입력하세요">
+               </div>
+               <div class="insta">
+                   <a href="https://www.instagram.com/sangmog883/">
+                       <img src="img_videos/instargram.png" alt="Icon" width="30" style="filter: invert(1); padding: 4px;">
+                   </a>
+               </div>
+           </nav>
 
-    <header>
-        <nav class="nav_style">
-            <ul class="nav-links">
-                <li class="li" style="font-size: 18px; margin-top: 0px; padding-top: 0px;">Contents</li>
-                <li class="li">자기소개</li>
-                <li class="li">좋아하는 디자인</li>
-                <li class="li">연습작들</li>
-                <li class="li">마무리</li>
-            </ul>
-            <div class="search-bar">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" placeholder="키워드를 입력하세요">
-            </div>
-            <div class="insta">
-               <a href="https://www.instagram.com/sangmog883/">
-                <img src="img&amp;videos/instargram.png" alt="Icon" width="30" style="filter: invert(1); padding: 4px;">
-            </a>
-            </div>
-        </nav>
-
-        <div class="hero-content">
-            <h1 class="hero-title">반가워요,<br>당신은 머글이 아니군요?</h1>
-            <p class="hero-desc">숨은 페이지를 찾은 여러분에게 저를 소개하겠습니다 :)</p>
-            <a href="#" class="btn-more">자세히보기</a>
-        </div>
-        <div style="height: 300px; width: 100%;"></div>
-        <div class="page-indicator"><span style="font-size: 34px; font-weight: 700;">9</span><span style="font-size: 12px; font-weight: 100;">와 3/4 페이지</span></div>
-    </header>
+           <div class="hero-content">
+               <h1 class="hero-title">반가워요,<br>당신은 머글이 아니군요?</h1>
+               <p class="hero-desc">숨은 페이지를 찾은 여러분에게 저를 소개하겠습니다 :)</p>
+               <a href="#" class="btn-more">자세히보기</a>
+           </div>
+           <div class="page-indicator"><span style="font-size: 34px; font-weight: 700;">9</span><span style="font-size: 12px; font-weight: 100;">와 3/4 페이지</span></div>
+       </div>
+       </header>
 
     <section class="profile-section">
        <div style="margin: 100px 0px 140px 0px;">
@@ -81,10 +92,16 @@
 
     <section class="reason-section">
         <div class="slider-container">
-            <div class="slider-img" style="background: linear-gradient(45deg, #1a1a1a, #333);">
-                <div class="play-btn">▶</div>
+            <div class="slider-img">
+                <video autoplay muted playsinline loop width="100%">
+                    <source src="img_videos/videos/Tunnel.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="slider-img" style="background: linear-gradient(135deg, #0047FF, #000);"></div>
+            <div class="slider-img">
+                <video autoplay muted playsinline loop width="100%">
+                    <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
         <h3 class="reason-q">Q. 왜 관심이 있나요?</h3>
         <p class="reason-a">
@@ -94,42 +111,94 @@
 
     <section class="works-section">
         <h2 class="works-title">그동안 만든 연습작들</h2>
-        
         <div class="works-grid">
+
+
             <div class="work-card">
-                <div class="work-info">
-                    <p>설명글</p>
-                    <p class="work-tag">v.김상목</p>
+                <div class="work-info-hover">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <video autoplay muted playsinline loop width="100%" style="position: absolute; z-index: -99;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted playsinline loop style="height: 100%; position: absolute; z-index: -100;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="work-info">
+                        <p>설명글</p>
+                        <p class="work-tag">asdlfjasdknfljasdnflkansdljkfnlaskjdf</p>
+                    </div>
                 </div>
             </div>
             <div class="work-card">
-                <div class="work-info">
-                    <p>설명글</p>
-                    <p class="work-tag">v.김상목</p>
+                <div class="work-info-hover">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <video autoplay muted playsinline loop width="100%" style="position: absolute; z-index: -99;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted playsinline loop style="height: 100%; position: absolute; z-index: -100;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="work-info">
+                        <p>설명글</p>
+                        <p class="work-tag">asdlfjasdknfljasdnflkansdljkfnlaskjdf</p>
+                    </div>
                 </div>
             </div>
             <div class="work-card">
-                <div class="work-info">
-                    <p>설명글</p>
-                    <p class="work-tag">v.김상목</p>
+                <div class="work-info-hover">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <video autoplay muted playsinline loop width="100%" style="position: absolute; z-index: -99;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted playsinline loop style="height: 100%; position: absolute; z-index: -100;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="work-info">
+                        <p>설명글</p>
+                        <p class="work-tag">asdlfjasdknfljasdnflkansdljkfnlaskjdf</p>
+                    </div>
                 </div>
             </div>
             <div class="work-card">
-                <div class="work-info">
-                    <p>설명글</p>
-                    <p class="work-tag">v.김상목</p>
+                <div class="work-info-hover">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <video autoplay muted playsinline loop width="100%" style="position: absolute; z-index: -99;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted playsinline loop style="height: 100%; position: absolute; z-index: -100;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="work-info">
+                        <p>설명글</p>
+                        <p class="work-tag">asdlfjasdknfljasdnflkansdljkfnlaskjdf</p>
+                    </div>
                 </div>
             </div>
             <div class="work-card">
-                <div class="work-info">
-                    <p>설명글</p>
-                    <p class="work-tag">v.김상목</p>
+                <div class="work-info-hover">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <video autoplay muted playsinline loop width="100%" style="position: absolute; z-index: -99;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted playsinline loop style="height: 100%; position: absolute; z-index: -100;">
+                            <source src="img_videos/videos/Crystal.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="work-info">
+                        <p>설명글</p>
+                        <p class="work-tag">asdlfjasdknfljasdnflkansdljkfnlaskjdf</p>
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div style="width: 100%; height: 100px;"></div>
+        <div style="width: 100%; height: 100px;" ></div>
         <div class="sky_background">
-          <img src="img&amp;videos/sky_background.png" style="width: 100%; height: auto;">
+          <img src="img_videos/sky_background.png" style="width: 100%; height: auto;">
            <div>
             <h2 class="conc-title">마지막으로...</h2>
             <p class="conc-main">아직은 제가 생각하고 있는 것들을 모두 구현할 정도의 실력은 안되지만, 상상을 현실로 모두 옮기는 그날까지 나아가겠습니다.<br>
@@ -138,7 +207,7 @@
         </div>
         </div>
     <div class="footer">
-    <p class="footer-logo">NewMedia&amp;Game Design</p>
+    <p class="footer-logo">NewMedia&amp;GameDesign</p>
     <div class="mischief-managed">Mischief managed.
         <p class="footer-subtitle">장난 끝</p>
     </div>
