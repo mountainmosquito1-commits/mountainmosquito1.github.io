@@ -632,6 +632,8 @@ footer {
     width: 200%;
     z-index: -101;
     height: 200%;
+    filter: brightness(30%) blur(8px);
+
 }
 
 .work-info {
@@ -655,7 +657,6 @@ footer {
     height: 100%;
     overflow: hidden;
     border-radius: 15px;
-    background-color: #0047FF;
     z-index: 99;
     
 }
@@ -666,10 +667,17 @@ footer {
 .angle2_mp4 {
     height: 100%;
     position: absolute;
-
+    filter: brightness(50%);
 }
 
 .card_in_mp4 {
     width: 100%;
     
+}
+
+.card_background {
+    height: 100%;
+    position: absolute;
+    z-index: -100;
+    filter: blur(8px) brightness(30%);
 }
