@@ -616,10 +616,11 @@ footer {
 
 
 .header {
-
     color: white;
-    height: 80vh;
-    display: absolute;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
 .tensi_mp4 {
@@ -632,11 +633,16 @@ footer {
 }
 
 .angle_mp4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 200%;
-    z-index: -101;
-    height: 200%;
-    filter: brightness(30%) blur(8px);
-
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(15%) blur(8px);
+    z-index: -100;
+    
 }
 
 .work-info {
@@ -684,9 +690,11 @@ footer {
     margin-top: -70px;
     }
 .angle2_mp4 {
+    width: 100%;
     height: 100%;
-    position: absolute;
+    object-fit: contain;
     filter: brightness(50%);
+    z-index: 2;
 }
 
 .card_in_mp4 {
@@ -723,6 +731,12 @@ footer {
         font-weight: 800;
     }
 
+    .header {
+    color: white;
+    height: 610px;
+    display: absolute;
+}
+    
     .interest-title {
         font-size: 1.1rem;
         color: #444;
@@ -1095,3 +1109,12 @@ footer {
 
 
 
+
+.header_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
