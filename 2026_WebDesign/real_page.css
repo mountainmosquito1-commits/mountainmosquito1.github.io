@@ -140,7 +140,7 @@ nav {
     flex-direction: column;
     margin-top: 18%;
     justify-content: center;
-    margin-left: 200px;
+    margin-left: 60px;
     max-width: 600px;
 }
 
@@ -185,7 +185,7 @@ nav {
 
 .page-indicator {
     text-align: right;
-    margin-top: 0%;
+
 }
 
 .page-indicator span {
@@ -594,7 +594,10 @@ footer {
 }
 
 
-.insta {}
+.insta {
+    padding: 1px;
+    
+}
 
 .nav_style {
     gap: 120px;
@@ -649,8 +652,24 @@ footer {
     transition-timing-function: cubic-bezier(.09, .43, .21, 1);
     z-index: 100;
 }
+.li_box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 40px 80px 6px 80px;
+}
+.nine_font {
+    font-size: 34px;
+    font-weight: 300;
+    display: inline-block;
+}
 
-
+.nine_font2 {
+    font-size: 12px;
+    font-weight: 100;
+    display: inline-block;
+}
 .work-info-hover {
     position: relative;
     width: 100%;
@@ -681,3 +700,398 @@ footer {
     z-index: -100;
     filter: blur(8px) brightness(30%);
 }
+
+.li_first {
+    font-size: 18px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-weight: 500;
+}
+
+.page-indicator2 {
+    font-size: 12px;
+    font-weight: 100;
+    text-align: right;
+    margin-top: 0%;
+}
+
+/*여기서부터는 인터렉션 적용*/
+@media screen and (max-width: 1200px) {
+    .interest-value {
+        font-size: 60px;
+        color: var(--primary-blue);
+        font-weight: 800;
+    }
+
+    .interest-title {
+        font-size: 1.1rem;
+        color: #444;
+        font-weight: 400;
+    }
+
+    .reason-q {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 140px;
+    }
+
+    .reason-a {
+        color: white;
+        opacity: 70%;
+        margin: 0 auto;
+        font-size: 14px;
+        font-weight: 100px;
+    }
+
+    .hero-title {
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.2;
+
+    }
+
+    .hero-desc {
+        font-size: 12px;
+        margin-bottom: 20px;
+        color: #ccc;
+
+    }
+
+    .li_first {
+        font-size: 18px;
+        margin-top: 0px;
+        padding-top: 0px;
+        font-weight: 500;
+    }
+
+    
+    .li {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .name-highlight {
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 90px;
+        margin: 0 60px;
+        opacity: 100%;
+
+    }
+
+    .profile-intro {
+        font-size: 16px;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-weight: 100;
+        letter-spacing: 6px;
+    }
+
+    .conc-main {
+        position: absolute;
+        top: 37%;
+        left: 18%;
+        font-size: 14px;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    .conc-title {
+        position: absolute;
+        top: 28%;
+        left: 18%;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .footer-logo {
+        font-family: pretendard;
+        font-size: 14px;
+        font-weight: 400;
+        position: absolute;
+    }
+
+    .contact {
+        font-family: pretendard;
+        font-weight: lighter;
+        font-size: 10px;
+    }
+
+    .mischief-managed {
+        margin: 90px 0px 20px 0px;
+        font-family: 해리포터;
+        font-style: italic;
+        font-size: 34px;
+    }
+
+    .footer-subtitle {
+        font-family: 우아한셰리프;
+        font-size: 12px;
+        color: #888;
+        font-style: normal;
+
+    }
+
+    .work-info-hover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 15px;
+        z-index: 99;
+
+    }
+.nine_font {
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.nine_font2 {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+}
+@media screen and (max-width: 768px) {
+
+.li_box {
+    position: absolute;
+    width: 100%;
+    height: 58%;
+    top: 0;
+    padding: 36px 44px 6px 44px;
+
+    }
+    
+    .li {
+        padding: 2px;
+        font-size: 8px;
+        font-weight: 400;
+    }
+    
+.li_first {
+    font-size: 14px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-weight: 600;
+}
+
+    .header {
+
+        color: white;
+        height: 56vh;
+        display: absolute;
+    }
+
+    .interest-section {
+        position: relative;
+        padding: 74px 20px 20px 20px;
+        top: 0px;
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        text-align: center;
+        border-radius: 40px 40px 0px 0px;
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.22);
+    }
+
+    .interest-title {
+        font-size: 0.8rem;
+        color: #444;
+        font-weight: 400;
+    }
+
+    .interest-value {
+        font-size: 50px;
+        color: var(--primary-blue);
+        font-weight: 800;
+        margin-top: -8px;
+    }
+
+    .reason-section {
+        background-color: #003edd;
+        color: white;
+        padding: 150px 10% 60px 10%;
+        margin-top: -80px;
+        text-align: center;
+    }
+
+    .interest-section {
+        position: relative;
+        padding: 56px 20px 20px 20px;
+        top: 0px;
+        width: 100%;
+        height: 200px;
+        background-color: white;
+        text-align: center;
+        border-radius: 40px 40px 0px 0px;
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.22);
+    }
+
+    .reason-q {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .reason-a {
+        color: white;
+        opacity: 70%;
+        margin: 0 auto;
+        font-size: 10px;
+        font-weight: 100px;
+    }
+
+    .works-title {
+        font-size: 24px;
+        margin-bottom: 40px;
+        font-weight: 700;
+    }
+
+    .works-section {
+        background-color: #0e0e0e;
+        padding: 74px 0px 0px 0px;
+        height: 1200px;
+        text-align: center;
+        color: white;
+    }
+
+    .conc-main {
+        position: absolute;
+        top: 37%;
+        left: 14%;
+        font-size: 10px;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    .conc-title {
+        position: absolute;
+        top: 25%;
+        left: 14%;
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .contact {
+        font-family: pretendard;
+        font-weight: lighter;
+        font-size: 8px;
+        font-weight: 100;
+    }
+
+
+    .footer-logo {
+        font-family: pretendard;
+        font-size: 14px;
+        font-weight: 300;
+        position: absolute;
+    }
+
+    .mischief-managed {
+        margin: 70px 0px 20px 0px;
+        font-family: 해리포터;
+        font-style: italic;
+        font-size: 28px;
+    }
+
+    .footer-subtitle {
+        font-family: 우아한셰리프;
+        font-size: 10px;
+        color: #888;
+        font-style: normal;
+
+    }
+
+    .footer {
+        position: relative;
+        top: -10px;
+        background-color: #0e0e0e;
+        color: white;
+        padding: 30px 4% 30px;
+        text-align: center;
+    }
+
+    .hero-title {
+        margin-bottom: 6px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+
+    }
+
+    .hero-desc {
+        font-size: 8px;
+        font-weight: 200;
+        margin-bottom: 14px;
+        color: #ccc;
+
+    }
+
+    .btn-more {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 6px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        width: fit-content;
+        border: 0px solid rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+        font-size: 8px;
+        font-weight: 100;
+    }
+
+    .nine_font {
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    .nine_font2 {
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+.search-bar {
+    margin-top: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    
+}
+    .nine_font {
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.nine_font2 {
+    font-size: 10px;
+    font-weight: 100;
+    display: inline-block;
+}
+}
+
+
+
+
+
+
+
+
+
+
