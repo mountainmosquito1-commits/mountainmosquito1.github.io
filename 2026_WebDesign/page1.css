@@ -140,14 +140,44 @@
             background-color: #dcd9c6;
         }
 
-        /* 🔴 올바른 CSS 주석: 뒷면은 사전에 미리 뒤집기 */
+        /* 뒷면은 사전에 미리 뒤집기 */
         .back { 
             background: #aba18b; 
             transform: rotateY(180deg);
         }
 
-        /* 🔴 올바른 CSS 주석: 호버 시 뒤집기 */
+        /* 호버 시 뒤집기 */
         .flip:hover .card {
             transform: rotateY(180deg);
         }
         
+
+
+@media screen and (max-width: 1200px){
+
+    
+    
+}
+
+@media screen and (max-width: 768px){
+    .main-title {
+        font-size: 20px; 
+    }
+        .warning-text-large {
+            font-size: 10px;
+        }
+            .warning-text-small {
+            font-size: 8px;
+        }
+            .sub-title {
+            font-size: 8px;
+        }
+            .top-header {
+            font-size: 6px;
+        }
+    
+            .footer-text {
+            font-family: '우아한셰리프';
+            font-size: 6px;
+        }
+}

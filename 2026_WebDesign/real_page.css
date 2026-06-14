@@ -102,6 +102,12 @@ body {
 
 
 
+.insta-icon {
+    width: 30px;
+    filter: invert(1);
+    padding: 4px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -112,7 +118,7 @@ nav {
 
 .nav-links {
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .search-bar {
@@ -151,6 +157,7 @@ nav {
 }
 
 .hero-title {
+
     margin-bottom: 10px;
     font-size: 38px;
     font-weight: 700;
@@ -176,6 +183,7 @@ nav {
     transition: 0.3s;
     font-size: 12px;
     font-weight: 100;
+    margin-bottom: 70px;
 }
 
 .btn-more:hover {
@@ -188,6 +196,29 @@ nav {
 
 }
 
+.work-video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.work-video-bg {
+    position: absolute;
+    z-index: -99;
+}
+
+.work-info-hover2 {
+    width: 100%;
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+}
+
 .page-indicator span {
     font-weight: 300;
     font-size: 1.2rem;
@@ -196,7 +227,7 @@ nav {
 
 /* Profile Section */
 .profile-section {
-    padding: 100px 10% 200px 10%;
+    padding: 200px 10% 200px 10%;
     background-color: white;
     text-align: center;
 }
@@ -229,6 +260,7 @@ nav {
     font-size: 12px;
     display: inline-block;
     font-weight: 100;
+    margin-top: 60px;
     margin-bottom: 25px;
 }
 
@@ -351,6 +383,9 @@ nav {
     overflow: hidden;
     position: relative;
     box-shadow: -6px 6px 16px rgba(0, 0, 0, 0.41);
+    display: flex;
+    justify-content: center;  /* 가로 가운데 정렬 */
+    align-items: center;      /* 세로 가운데 정렬 */
 }
 
 .play-btn {
@@ -600,7 +635,6 @@ footer {
 }
 
 .nav_style {
-    gap: 120px;
 }
 .contact {
     font-family: pretendard;
@@ -617,7 +651,7 @@ footer {
 
 .header {
     color: white;
-    height: 800px;
+    height: 860px;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -667,7 +701,7 @@ footer {
 }
 .nine_font {
     font-size: 34px;
-    font-weight: 300;
+    font-weight: 500;
     display: inline-block;
 }
 
@@ -683,7 +717,6 @@ footer {
     overflow: hidden;
     border-radius: 15px;
     z-index: 99;
-    
 }
 
 .work-info-hover:hover .work-info{
@@ -722,6 +755,23 @@ footer {
     text-align: right;
     margin-top: 0%;
 }
+.header_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.big_head_box {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 80px 50px 120px;
+}
+
 
 /*여기서부터는 인터렉션 적용*/
 @media screen and (max-width: 1200px) {
@@ -730,11 +780,50 @@ footer {
         color: var(--primary-blue);
         font-weight: 800;
     }
-
+    
+    
+    .profile-section {
+    padding: 100px 10% 140px 10%;
+    background-color: white;
+    text-align: center;
+}
+    
+    .work-card {
+        height: 280px; 
+    }
+    
+    .slider-img {
+    height: 320px;
+}
+    
+.li {
+    padding: 2px;
+}
+    .btn-more {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+    width: fit-content;
+    border: 0px solid rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+    
+    .big_head_box {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 80px 20px 100px;
+}
+    
     .header {
     color: white;
     height: 610px;
-    display: absolute;
 }
     
     .interest-title {
@@ -743,6 +832,7 @@ footer {
         font-weight: 400;
     }
 
+    
     .reason-q {
         font-size: 18px;
         font-weight: 700;
@@ -755,7 +845,7 @@ footer {
         opacity: 70%;
         margin: 0 auto;
         font-size: 14px;
-        font-weight: 100px;
+        font-weight: 100;
     }
 
     .hero-title {
@@ -863,25 +953,83 @@ footer {
 
     }
 .nine_font {
-    font-size: 34px;
-    font-weight: 900;
+    font-size: 22px;
+    font-weight: 500;
 }
 
+
+    
 .nine_font2 {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 100;
 }
 
+    
+.work-info-hover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    z-index: 99;
+    
 }
-@media screen and (max-width: 768px) {
 
+.work-info-hover:hover .work-info{
+    margin-top: -70px;
+    }
+    
+    
+    
+    
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    
+.slider-img {
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: -6px 6px 16px rgba(0, 0, 0, 0.41);
+}
+    
 .li_box {
     position: absolute;
     width: 100%;
-    height: 58%;
+    height: 100%;
     top: 0;
-    padding: 36px 44px 6px 44px;
-
+    padding: 20px 30px 6px 30px;
+}
+    
+    .work-info {
+    font-size: 9px;
+    }
+    work-tag{
+        
+    font-size: 8px;
+    }
+    
+.work-info-hover:hover .work-info{
+    margin-top: -110px;
+    }
+    
+    .profile-section {
+    padding: 80px 10% 200px 10%;
+    background-color: white;
+    text-align: center;
+}
+    
+    .slider-img {
+    height: 230px;
+}
+    
+    .work-card {
+        height: 200px;
     }
     
     .li {
@@ -890,190 +1038,203 @@ footer {
         font-weight: 400;
     }
     
+    
 .li_first {
     font-size: 14px;
     margin-top: 0px;
     padding-top: 0px;
     font-weight: 600;
 }
+    
 
     .header {
+    color: white;
+    height: 500px;
+}
 
-        color: white;
-        height: 56vh;
-        display: absolute;
-    }
+.big_head_box {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 40px 30px 10px;
+}
+    
 
-    .interest-section {
-        position: relative;
-        padding: 74px 20px 20px 20px;
-        top: 0px;
-        width: 100%;
-        height: 300px;
-        background-color: white;
-        text-align: center;
-        border-radius: 40px 40px 0px 0px;
-        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.22);
-    }
-
+    
     .interest-title {
         font-size: 0.8rem;
         color: #444;
         font-weight: 400;
     }
 
+    
     .interest-value {
         font-size: 50px;
         color: var(--primary-blue);
         font-weight: 800;
         margin-top: -8px;
     }
+    
 
     .reason-section {
         background-color: #003edd;
         color: white;
         padding: 150px 10% 60px 10%;
-        margin-top: -80px;
-        text-align: center;
-    }
-
-    .interest-section {
-        position: relative;
-        padding: 56px 20px 20px 20px;
-        top: 0px;
-        width: 100%;
-        height: 200px;
-        background-color: white;
-        text-align: center;
-        border-radius: 40px 40px 0px 0px;
-        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.22);
-    }
-
-    .reason-q {
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-
-    .reason-a {
-        color: white;
-        opacity: 70%;
-        margin: 0 auto;
-        font-size: 10px;
-        font-weight: 100px;
-    }
-
-    .works-title {
-        font-size: 24px;
-        margin-bottom: 40px;
-        font-weight: 700;
-    }
-
-    .works-section {
-        background-color: #0e0e0e;
-        padding: 74px 0px 0px 0px;
-        height: 1200px;
-        text-align: center;
-        color: white;
-    }
-
-    .conc-main {
-        position: absolute;
-        top: 37%;
-        left: 14%;
-        font-size: 10px;
-        font-weight: lighter;
-        text-align: left;
-    }
-
-    .conc-title {
-        position: absolute;
-        top: 25%;
-        left: 14%;
-        font-size: 26px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        display: inline-block;
-    }
-
-    .contact {
-        font-family: pretendard;
-        font-weight: lighter;
-        font-size: 8px;
-        font-weight: 100;
+    margin-top: -80px;
+    text-align: center;
     }
 
 
-    .footer-logo {
-        font-family: pretendard;
-        font-size: 14px;
-        font-weight: 300;
-        position: absolute;
-    }
+.interest-section {
+    position: relative;
+    padding: 56px 20px 20px 20px;
+    top: 0px;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    border-radius: 40px 40px 0px 0px;
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.22);
+}
 
-    .mischief-managed {
-        margin: 70px 0px 20px 0px;
-        font-family: 해리포터;
-        font-style: italic;
-        font-size: 28px;
-    }
 
-    .footer-subtitle {
-        font-family: 우아한셰리프;
-        font-size: 10px;
-        color: #888;
-        font-style: normal;
+.reason-q {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 
-    }
 
-    .footer {
-        position: relative;
-        top: -10px;
-        background-color: #0e0e0e;
-        color: white;
-        padding: 30px 4% 30px;
-        text-align: center;
-    }
+.reason-a {
+    color: white;
+    opacity: 70%;
+    margin: 0 auto;
+    font-size: 10px;
+    font-weight: 100px;
+}
 
-    .hero-title {
-        margin-bottom: 6px;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 1.2;
 
-    }
+.works-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
 
-    .hero-desc {
-        font-size: 8px;
-        font-weight: 200;
-        margin-bottom: 14px;
-        color: #ccc;
 
-    }
+.works-section {
+    background-color: #0e0e0e;
+    padding: 74px 0px 0px 0px;
+    height: 1000px;
+    text-align: center;
+    color: white;
+}
 
-    .btn-more {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        padding: 6px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        width: fit-content;
-        border: 0px solid rgba(255, 255, 255, 0.4);
-        transition: 0.3s;
-        font-size: 8px;
-        font-weight: 100;
-    }
+.conc-main {
+    position: absolute;
+    top: 37%;
+    left: 14%;
+    font-size: 10px;
+    font-weight: lighter;
+    text-align: left;
+}
 
-    .nine_font {
-        font-size: 34px;
-        font-weight: 700;
-    }
 
-    .nine_font2 {
-        font-size: 12px;
-        font-weight: 100;
-    }
+.conc-title {
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+.contact {
+    font-family: pretendard;
+    font-weight: lighter;
+    font-size: 8px;
+    font-weight: 100;
+}
+
+
+.footer-logo {
+    font-family: pretendard;
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+}
+
+
+.mischief-managed {
+    margin: 70px 0px 20px 0px;
+    font-family: 해리포터;
+    font-style: italic;
+    font-size: 28px;
+}
+
+
+.footer-subtitle {
+    font-family: 우아한셰리프;
+    font-size: 10px;
+    color: #888;
+    font-style: normal;
+}
+
+
+.footer {
+    position: relative;
+    top: -10px;
+    background-color: #0e0e0e;
+    color: white;
+    padding: 30px 4% 30px;
+    text-align: center;
+}
+
+
+.hero-title {
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+.hero-desc {
+    font-size: 8px;
+    font-weight: 200;
+    margin-bottom: 14px;
+    color: #ccc;
+}
+
+
+.btn-more {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    width: fit-content;
+    border: 0px solid rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+    font-size: 8px;
+    font-weight: 100;
+}
+
+
+.nine_font {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+.nine_font2 {
+    font-size: 12px;
+    font-weight: 100;
+}
+
 
 .search-bar {
     margin-top: 2px;
@@ -1084,37 +1245,32 @@ footer {
     display: flex;
     align-items: center;
     width: 200px;
-    
+
 }
-    .nine_font {
+
+.nine_font {
     font-size: 20px;
     font-weight: 600;
     display: inline-block;
     margin-right: 2px;
 }
 
+
 .nine_font2 {
     font-size: 10px;
     font-weight: 100;
     display: inline-block;
 }
+
+.insta-icon {
+    width: 20px;
+    filter: invert(1);
+    padding: 4px;
 }
 
-
-
-
-
-
-
-
-
-
-
-.header_box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.conc-title {
+    font-size: 24px;
 }
+
+}
+
