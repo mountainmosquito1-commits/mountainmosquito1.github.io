@@ -8,7 +8,7 @@
 
 .card-list {
     background-color: #f6f6f6;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 20px;

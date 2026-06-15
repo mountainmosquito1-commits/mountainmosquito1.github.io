@@ -164,9 +164,8 @@
 }
 
 .target, .dummy {
-  /* 글자가 이동하거나 사라질 때 스르륵 변하도록 애니메이션 처리 */
-  transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1); 
-  order: 50; /* 처음에는 순서 없이 뒤죽박죽 섞이게 중간 값 부여 */
+  transition: all 10s cubic-bezier(0.25, 0.8, 0.25, 1); 
+  order: 50; 
 }
 
 .back_text {
@@ -185,16 +184,43 @@
     
 }
 
+p{
+    transition: all 10s ease;
+}
+
 
 @media screen and (max-width: 1200px){
+    .text_effect {
+    font-size: 16px; 
+    color: #161616;
+}
 
+    .back_text{
+        font-size: 0px;
+        color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
     
     
 }
 
 @media screen and (max-width: 768px){
+    
+    .text_effect {
+    font-size: 10px; 
+    color: #161616;
+    font-weight: 400;
+}
+
+    .back_text{
+        font-size: 10px;
+        color: #161616;
+        padding: 20px;
+        font-weight: 400;
+    }
+    
     .main-title {
-        font-size: 20px; 
+        font-size: 10px; 
     }
         .warning-text-large {
             font-size: 10px;
@@ -210,41 +236,10 @@
         }
     
             .footer-text {
-            font-family: '우아한셰리프';
             font-size: 6px;
         }
     
-
-    
-     .marauders-map {
-    justify-content: center; /* 가운데 정렬로 모아주기 */
-  }
-  
-  .dummy {
-    opacity: 0;
-    transform: scale(0.5) translateY(-20px); /* 위로 흐려지며 사라지는 효과 */
-    position: absolute; /* 공간을 차지하지 않도록 띄워버림 */
-    pointer-events: none;
-  }
-  
-  .target {
-    order: var(--ord); /* 지정해둔 1, 2, 3... 순서대로 착착 정렬 */
-    color: #d4af37; /* 마법처럼 빛나는 금색 (해리포터 테마) */
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
-  }
-
-    
-.text_effect {
-    font-size: 16px; 
-    color: #000000;
-}
-
-    .back_text{
-        font-size: 4px;
-        color: rgba(0, 0, 0, 0.2);
+            .sub-title {
+            font-size: 8px;
     }
-    
-.back_text {
-    padding: 20px;
-}
-}
+    }
