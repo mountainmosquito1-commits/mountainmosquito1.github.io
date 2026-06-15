@@ -59,6 +59,7 @@
             font-weight: 900;
             display: inline-block;
             margin-bottom: 20px;
+            margin-top: 20px;
         }
 
         .sub-title {
@@ -125,7 +126,7 @@
 
         .card {
             width: 100%; 
-            height: 100%; 
+            height: 600px; 
             position: relative;
             transition: 0.6s; /* 4s는 너무 느려서 답답할 수 있으니 0.6초로 변경 */
             transform-style: preserve-3d;
@@ -151,6 +152,38 @@
             transform: rotateY(180deg);
         }
         
+/* 기본 상태: 마구잡이로 섞여있는 텍스트 */
+.marauders-map {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: 'Pretendard', serif; /* 해리포터 느낌을 원한다면 바탕/명조체도 좋습니다 */
+  font-size: 1.5rem;
+  padding: 2rem;
+  color: #333;
+}
+
+.target, .dummy {
+  /* 글자가 이동하거나 사라질 때 스르륵 변하도록 애니메이션 처리 */
+  transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1); 
+  order: 50; /* 처음에는 순서 없이 뒤죽박죽 섞이게 중간 값 부여 */
+}
+
+.back_text {
+    padding: 120px;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 14px;
+    font-size: 10px;
+    font-family: '우아한셰리프';
+    font-weight: 100;
+    display: inline-block;
+}
+
+.text_effect {
+    
+}
 
 
 @media screen and (max-width: 1200px){
@@ -180,4 +213,38 @@
             font-family: '우아한셰리프';
             font-size: 6px;
         }
+    
+
+    
+     .marauders-map {
+    justify-content: center; /* 가운데 정렬로 모아주기 */
+  }
+  
+  .dummy {
+    opacity: 0;
+    transform: scale(0.5) translateY(-20px); /* 위로 흐려지며 사라지는 효과 */
+    position: absolute; /* 공간을 차지하지 않도록 띄워버림 */
+    pointer-events: none;
+  }
+  
+  .target {
+    order: var(--ord); /* 지정해둔 1, 2, 3... 순서대로 착착 정렬 */
+    color: #d4af37; /* 마법처럼 빛나는 금색 (해리포터 테마) */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  }
+
+    
+.text_effect {
+    font-size: 16px; 
+    color: #000000;
+}
+
+    .back_text{
+        font-size: 4px;
+        color: rgba(0, 0, 0, 0.2);
+    }
+    
+.back_text {
+    padding: 20px;
+}
 }

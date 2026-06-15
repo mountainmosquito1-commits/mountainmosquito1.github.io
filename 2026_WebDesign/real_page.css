@@ -550,6 +550,8 @@ footer {
     font-size: 20px;
     font-weight: 400;
     position: absolute;
+    top: 10%;
+    color: #e2e2e2;
 }
 
 .mischief-managed {
@@ -557,6 +559,9 @@ footer {
     font-family: 해리포터;
     font-style: italic;
     font-size: 40px;
+    opacity: 0;
+    transition: opacity 3s cubic-bezier(.73, .01, .4, .99);
+    
 }
 
 .footer-subtitle {
@@ -770,6 +775,13 @@ footer {
     bottom: 0px;
     left: 0px;
     padding: 0px 80px 50px 120px;
+}
+
+
+
+
+.mischief-managed:hover{
+    opacity: 1;
 }
 
 
@@ -1269,7 +1281,7 @@ footer {
 }
 
 .conc-title {
-    font-size: 24px;
+    font-size: px;
 }
 
 }
