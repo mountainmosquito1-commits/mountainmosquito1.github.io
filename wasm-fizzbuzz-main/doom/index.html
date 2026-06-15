@@ -72,11 +72,34 @@
       #output span.log { color:darkslateblue; }
       #output span.stdout { color: black; }
       #output span.stderr { font-weight: bold; color:brown; }
+      
+      
+.noto-sans-kr-<uniquifier> {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
     </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
 
+   <div id="guideModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 100;">
+  <div style="background: white; padding: 30px; border-radius: 15px; width: 80%; max-width: 500px; text-align: center;">
+    <h2 style="'Noto Sans KR', sans-serif; font-weight: 800; margin: 10px auto;">DooM 게임방법</h2>
+    <p style="'Noto Sans KR', sans-serif; font-weight: 100; font-size: 12px; line-height: 18px; margin-bottom: 20px;">게임 설정 확인 : Enter<br>움직이기 : 방향키<br> 사격 : control<br>문열기 : 스페이스바</p>
+    <button onclick="closeModal()" style="'Noto Sans KR', sans-serif; padding: 10px 20px; cursor: pointer; border-radius: 8px; border: 1px solid #999999;">창 닫기</button>
+  </div>
+</div>
+
+<div style="position: fixed; bottom: 20px; z-index: 50;">
+  <button onclick="openModal()" style="padding: 10px 20px; cursor: pointer; background: #444444; color: white; border: none; border-radius: 8px;">도움말</button>
+</div>
+   
     <div class="container">
       <canvas id="screen" width="640" height="400" tabindex="0">This is where the DooM screen should render.</canvas>
       <div id="output"></div>

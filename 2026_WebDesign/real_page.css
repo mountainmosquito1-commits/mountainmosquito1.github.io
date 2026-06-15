@@ -784,6 +784,14 @@ footer {
     opacity: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a{    
+    text-decoration: none;
+    color: inherit;
+}
 
 /*여기서부터는 인터렉션 적용*/
 @media screen and (max-width: 1200px) {
