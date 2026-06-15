@@ -24,7 +24,7 @@
             text-align: center;
             position: relative;
             padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .top-header {
@@ -71,7 +71,7 @@
         .wanted-image-container {
             width: 86%;
             margin: 0 auto 0px;
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             line-height: 0;
         }
 
@@ -111,45 +111,44 @@
 
 
         @font-face {
-              font-family: '우아한셰리프';
-              src: url('fonts/GraceSerif-Regular.otf') format('opentype');
-              font-weight: normal;
-              font-style: normal;
-            }
+            font-family: '우아한셰리프';
+            src: url('fonts/GraceSerif-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-        .flip { 
+        .flip {
             width: 100%;
             height: 600px;
             padding: 10px 90px 10px 90px;
             perspective: 1000px;
-            
+
         }
 
         .card {
-            width: 100%; 
-            height: 600px; 
+            width: 100%;
+            height: 600px;
             position: relative;
-            transition: 0.6s; /* 4s는 너무 느려서 답답할 수 있으니 0.6초로 변경 */
+            transition: 0.6s;
+            /* 4s는 너무 느려서 답답할 수 있으니 0.6초로 변경 */
             transform-style: preserve-3d;
-        }    
+        }
 
-        .front{
+        .front {
             position: absolute;
-
-            width: 100%; 
+            width: 100%;
             height: 100%;
             backface-visibility: hidden;
             background-color: #dcd9c6;
             object-fit: cover;
             object-position: center;
             backface-visibility: hidden;
-
         }
 
         .back {
             position: absolute;
             left: 0px;
-            width: 100%; 
+            width: 100%;
             height: 100%;
             backface-visibility: hidden;
             background-color: #aba18b;
@@ -164,100 +163,104 @@
         .flip:hover .card {
             transform: rotateY(180deg);
         }
-        
-/* 기본 상태: 마구잡이로 섞여있는 텍스트 */
-.marauders-map {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  font-family: 'Pretendard', serif; /* 해리포터 느낌을 원한다면 바탕/명조체도 좋습니다 */
-  font-size: 1.5rem;
-  padding: 2rem;
-  color: #333;
-}
 
-.target, .dummy {
-  transition: all 10s cubic-bezier(0.25, 0.8, 0.25, 1); 
-  order: 50; 
-}
+        /* 기본 상태: 마구잡이로 섞여있는 텍스트 */
+        .marauders-map {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-family: 'Pretendard', serif;
+            /* 해리포터 느낌을 원한다면 바탕/명조체도 좋습니다 */
+            font-size: 1.5rem;
+            padding: 2rem;
+            color: #333;
+        }
 
-.back_text {
-    padding: 120px;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-    line-height: 14px;
-    font-size: 10px;
-    font-family: '우아한셰리프';
-    font-weight: 100;
-    display: inline-block;
-}
+        .target,
+        .dummy {
+            transition: all 10s cubic-bezier(0.25, 0.8, 0.25, 1);
+            order: 50;
+        }
 
-.text_effect {
-    
-}
-
-p{
-    transition: all 10s ease;
-}
-
-
-@media screen and (max-width: 1200px){
-    .text_effect {
-    font-size: 16px; 
-    color: #161616;
-}
-
-    .back_text{
-        font-size: 0px;
-        color: rgba(0, 0, 0, 0.2);
-        padding: 20px;
-    }
-    
-    
-}
-
-@media screen and (max-width: 768px){
-    
-    .text_effect {
-    font-size: 10px; 
-    color: #161616;
-    font-weight: 400;
-}
-
-            .front{
-                width: 100%;
-    height: 100%;
-    }
-    
-    .back_text{
-        font-size: 10px;
-        color: #161616;
-        padding: 20px;
-        font-weight: 400;
-    }
-    
-    .main-title {
-        font-size: 10px; 
-    }
-        .warning-text-large {
+        .back_text {
+            padding: 120px;
+            align-content: center;
+            width: 100%;
+            height: 100%;
+            line-height: 14px;
             font-size: 10px;
+            font-family: '우아한셰리프';
+            font-weight: 100;
+            display: inline-block;
         }
+
+        .text_effect {}
+
+        p {
+            transition: all 10s ease;
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            .text_effect {
+                font-size: 16px;
+                color: #161616;
+            }
+
+            .back_text {
+                font-size: 0px;
+                color: rgba(0, 0, 0, 0.2);
+                padding: 20px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .text_effect {
+                font-size: 10px;
+                color: #161616;
+                font-weight: 400;
+            }
+
+            .front {
+                width: 100%;
+                height: 100%;
+            }
+
+            .back_text {
+                font-size: 10px;
+                color: #161616;
+                padding: 20px;
+                font-weight: 400;
+            }
+
+            .main-title {
+                font-size: 10px;
+            }
+
+            .warning-text-large {
+                font-size: 10px;
+            }
+
             .warning-text-small {
-            font-size: 8px;
-        }
+                font-size: 8px;
+            }
+
             .sub-title {
-            font-size: 8px;
-        }
+                font-size: 8px;
+            }
+
             .top-header {
-            font-size: 6px;
-        }
-    
+                font-size: 6px;
+            }
+
             .footer-text {
-            font-size: 6px;
-        }
-    
+                font-size: 6px;
+            }
+
             .sub-title {
-            font-size: 8px;
-    }
-    }
+                font-size: 8px;
+            }
+        }
