@@ -135,12 +135,15 @@
 
         .front{
             position: absolute;
+
             width: 100%; 
-            height: 110%;
+            height: 100%;
             backface-visibility: hidden;
             background-color: #dcd9c6;
             object-fit: cover;
             object-position: center;
+            backface-visibility: hidden;
+
         }
 
         .back {
@@ -151,6 +154,7 @@
             backface-visibility: hidden;
             background-color: #aba18b;
             transform: rotateY(180deg);
+
 
         }
 
