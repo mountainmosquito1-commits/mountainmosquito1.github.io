@@ -1,3 +1,16 @@
+function closeModal() {
+    document.getElementById('guideModal').style.display = 'none';
+    // 게임 시작을 위해 캔버스에 포커스를 줍니다.
+    document.getElementById('screen').focus();
+}
+
+function openModal() {
+    document.getElementById('guideModal').style.display = 'flex';
+}
+
+
+
+
 'use strict';
 var memory = new WebAssembly.Memory({ initial : 108 });
 

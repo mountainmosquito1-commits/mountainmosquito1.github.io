@@ -24,13 +24,13 @@
     padding: 20px 40px 20px 40px;
     border-radius: 10px;
     text-decoration: none;
-    color: #333;
-    border: 1px solid #d5d5d5;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.27);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.27);
     transition: transform 0.3s;
     font-family: Noto Sans KR;
     font-weight: 900;
     color: #222222;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -45,5 +45,4 @@
 }
 
 .content {
-    fontwe
 }
